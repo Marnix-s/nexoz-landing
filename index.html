@@ -134,7 +134,7 @@ nav.scrolled{background:rgba(6,6,15,.95);box-shadow:0 4px 30px rgba(0,0,0,.5)}
 .btn-secondary:hover{border-color:var(--purple);background:rgba(147,51,234,.1)}
 .hero-visual{position:relative;display:flex;justify-content:center;max-width:400px;margin:0 auto}
 .phone-mockup{
-  position:relative;
+  position:relative;z-index:1;
   width:280px;max-width:280px;
   border-radius:36px;
   overflow:hidden;
@@ -145,15 +145,22 @@ nav.scrolled{background:rgba(6,6,15,.95);box-shadow:0 4px 30px rgba(0,0,0,.5)}
 }
 .phone-mockup img{width:100%;height:auto;display:block;border-radius:36px}
 .phone-float{
-  position:absolute;
+  position:absolute;z-index:2;
   width:150px;max-width:150px;border-radius:20px;
   overflow:hidden;
-  box-shadow:0 10px 40px rgba(0,0,0,.5);
+  box-shadow:0 8px 32px rgba(0,0,0,.6),0 2px 8px rgba(147,51,234,.25);
   animation:float 6s ease-in-out infinite;
 }
 .phone-float img{width:100%;height:auto;display:block}
 .phone-float-1{top:-10px;right:-40px;animation-delay:0s}
 .phone-float-2{bottom:40px;left:-50px;animation-delay:2s}
+@media(min-width:1024px){
+  .hero-visual{max-width:520px}
+  .phone-mockup{width:360px;max-width:360px}
+  .phone-float{width:190px;max-width:190px}
+  .phone-float-1{top:-15px;right:-55px}
+  .phone-float-2{bottom:50px;left:-65px}
+}
 @keyframes float{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-15px)}
@@ -426,7 +433,7 @@ footer{
       <h1>Never miss<br><span class="gradient-text">what's next.</span></h1>
       <p>Feestjes, festivals, deals en uitgaan — alles in één app. Geen FOMO meer. Gepersonaliseerd voor jouw stad en jouw vibe.</p>
       <div class="hero-buttons">
-        <a href="#download" class="btn-primary">
+        <a href="https://play.google.com/store/apps/details?id=app.nexoz.mobile" target="_blank" rel="noopener noreferrer" class="btn-primary">
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
           Download gratis
         </a>
@@ -450,7 +457,7 @@ footer{
 <!-- STATS -->
 <section class="stats fade-up">
   <div class="stats-inner">
-    <div><div class="stat-num">4.650+</div><div class="stat-label">Events</div></div>
+    <div><div class="stat-num">1.750+</div><div class="stat-label">Events</div></div>
     <div><div class="stat-num">20+</div><div class="stat-label">Steden</div></div>
     <div><div class="stat-num">5</div><div class="stat-label">Categorieën</div></div>
     <div><div class="stat-num">0€</div><div class="stat-label">Kosten</div></div>
@@ -548,14 +555,14 @@ footer{
     <h2>Klaar om te ontdekken?</h2>
     <p>Download NEXOZ gratis en zeg vaarwel tegen FOMO. Alles wat er speelt, in jouw zak.</p>
     <div class="store-buttons">
-      <a href="#" class="store-btn">
+      <a href="#" class="store-btn" style="opacity:.45;pointer-events:none;cursor:default" title="Binnenkort beschikbaar">
         <svg class="store-icon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         <div class="store-text">
-          <small>Download on the</small>
-          <span>App Store</span>
+          <small>Binnenkort op</small>
+          <span>iOS</span>
         </div>
       </a>
-      <a href="#" class="store-btn">
+      <a href="https://play.google.com/store/apps/details?id=app.nexoz.mobile" target="_blank" rel="noopener noreferrer" class="store-btn">
         <svg class="store-icon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M3.61 1.814L13.793 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.61-.92zm.86-.467L15.674 6.96l-3.062 3.062L4.47 1.347zm11.2 5.613L19.15 9.15c.78.44 1.25 1.18 1.25 1.85s-.47 1.41-1.25 1.85l-3.48 2.19-3.29-3.04 3.29-3.04zM4.47 22.653l8.142-8.675-3.062 3.062L4.47 22.653z"/></svg>
         <div class="store-text">
           <small>Get it on</small>
