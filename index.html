@@ -84,6 +84,7 @@ nav.scrolled{background:rgba(6,6,15,.95);box-shadow:0 4px 30px rgba(0,0,0,.5)}
   display:flex;align-items:center;justify-content:center;
   padding:8rem 2rem 4rem;
   overflow:hidden;
+  background:linear-gradient(180deg,#1a0533 0%,var(--bg) 100%);
 }
 .hero::before{
   content:'';position:absolute;
@@ -133,37 +134,15 @@ nav.scrolled{background:rgba(6,6,15,.95);box-shadow:0 4px 30px rgba(0,0,0,.5)}
 }
 .btn-secondary:hover{border-color:var(--purple);background:rgba(147,51,234,.1)}
 .hero-visual{position:relative;display:flex;justify-content:center;max-width:400px;margin:0 auto}
-.phone-mockup{
-  position:relative;z-index:1;
-  width:280px;max-width:280px;
-  border-radius:36px;
-  overflow:hidden;
+.hero-screenshot{
+  width:100%;max-width:300px;
+  border-radius:30px;
   box-shadow:
     0 0 0 2px rgba(147,51,234,.2),
     0 20px 60px rgba(0,0,0,.5),
     0 0 120px rgba(147,51,234,.1);
-}
-.phone-mockup img{width:100%;height:auto;display:block;border-radius:36px}
-.phone-float{
-  position:absolute;z-index:2;
-  width:150px;max-width:150px;border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 8px 32px rgba(0,0,0,.6),0 2px 8px rgba(147,51,234,.25);
-  animation:float 6s ease-in-out infinite;
-}
-.phone-float img{width:100%;height:auto;display:block}
-.phone-float-1{top:-10px;right:-40px;animation-delay:0s}
-.phone-float-2{bottom:40px;left:-50px;animation-delay:2s}
-@media(min-width:1024px){
-  .hero-visual{max-width:520px}
-  .phone-mockup{width:360px;max-width:360px}
-  .phone-float{width:190px;max-width:190px}
-  .phone-float-1{top:-15px;right:-55px}
-  .phone-float-2{bottom:50px;left:-65px}
-}
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-15px)}
+  transform:rotate(3deg);
+  display:block;
 }
 
 /* ═══ STATS BAR ═══ */
@@ -234,27 +213,49 @@ nav.scrolled{background:rgba(6,6,15,.95);box-shadow:0 4px 30px rgba(0,0,0,.5)}
 .feature-card h3{font-size:1.2rem;font-weight:700;margin-bottom:.75rem}
 .feature-card p{font-size:.95rem;color:var(--text-muted);line-height:1.6}
 
-/* ═══ SCREENSHOTS ═══ */
+/* ═══ SCREENSHOTS / SHOWCASE ═══ */
 .screenshots{
   position:relative;z-index:1;
   padding:8rem 2rem;
   overflow:hidden;
 }
-.screenshots-track{
-  display:flex;gap:2rem;
-  justify-content:center;
-  flex-wrap:wrap;
-  max-width:1200px;margin:0 auto;
+.showcase-row{
+  max-width:1000px;margin:0 auto 6rem;
+  display:flex;align-items:center;gap:4rem;
 }
-.screenshot-item{
-  width:240px;flex-shrink:0;
-  border-radius:24px;overflow:hidden;
-  box-shadow:0 10px 40px rgba(0,0,0,.4);
-  transition:transform .4s;
+.showcase-row:last-child{margin-bottom:0}
+.showcase-row.reverse{flex-direction:row-reverse}
+.showcase-img{
+  flex:1;width:100%;max-width:350px;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+  border:1px solid rgba(147,51,234,.1);
+  display:block;
+}
+.showcase-text{flex:1}
+.showcase-text h3{font-size:1.6rem;font-weight:800;margin-bottom:1rem;letter-spacing:-.3px}
+.showcase-text p{color:var(--text-muted);font-size:1.05rem;line-height:1.7}
+
+/* ═══ GAMES SECTION ═══ */
+.games-section{
+  position:relative;z-index:1;
+  padding:8rem 2rem;
+}
+.games-grid{
+  max-width:900px;margin:0 auto 2.5rem;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2rem;
+}
+.games-grid img{
+  width:100%;display:block;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
   border:1px solid rgba(147,51,234,.1);
 }
-.screenshot-item:hover{transform:scale(1.05)}
-.screenshot-item img{width:100%;display:block}
+.games-caption{
+  max-width:640px;margin:0 auto;text-align:center;
+  color:var(--text-muted);font-size:1.05rem;line-height:1.7;
+}
 
 /* ═══ HOW IT WORKS ═══ */
 .how{
@@ -388,14 +389,16 @@ footer{
   .hero-text p{margin-left:auto;margin-right:auto}
   .hero-buttons{justify-content:center}
   .hero-visual{margin-top:2rem}
-  .phone-float{display:none}
+  .hero-screenshot{max-width:100%;transform:none}
   .features-grid{grid-template-columns:1fr}
   .nav-links{display:none}
+  .showcase-row,.showcase-row.reverse{flex-direction:column;text-align:center;gap:1.5rem}
+  .showcase-img{max-width:100%}
+  .games-grid{grid-template-columns:1fr}
 }
 @media(max-width:600px){
   nav{padding:.75rem 1rem}
   .hero{padding:6rem 1.25rem 3rem}
-  .phone-mockup{width:220px}
   .cta-box{padding:2.5rem 1.5rem}
   .store-buttons{flex-direction:column;align-items:center}
 }
@@ -420,7 +423,7 @@ footer{
   </div>
   <div class="nav-links">
     <a href="#features">Features</a>
-    <a href="#screenshots">Screenshots</a>
+    <a href="#screenshots">App</a>
     <a href="#how">Hoe het werkt</a>
     <a href="#download" class="nav-cta">Download</a>
   </div>
@@ -444,15 +447,7 @@ footer{
       </div>
     </div>
     <div class="hero-visual fade-up delay-2">
-      <div class="phone-mockup">
-        <img src="city-select.png" alt="NEXOZ app stadkeuze">
-      </div>
-      <div class="phone-float phone-float-1">
-        <img src="interests.png" alt="NEXOZ interessekeuze" style="border-radius:20px">
-      </div>
-      <div class="phone-float phone-float-2">
-        <img src="onboarding-intro.png" alt="NEXOZ onboarding" style="border-radius:20px">
-      </div>
+      <img src="ontdek-hero.jpg" alt="NEXOZ app — events ontdekken" class="hero-screenshot" loading="lazy">
     </div>
   </div>
 </section>
@@ -462,7 +457,7 @@ footer{
   <div class="stats-inner">
     <div><div class="stat-num">5.000+</div><div class="stat-label">Events</div></div>
     <div><div class="stat-num">20+</div><div class="stat-label">Steden</div></div>
-    <div><div class="stat-num">100%</div><div class="stat-label">Gratis</div></div>
+    <div><div class="stat-num">4</div><div class="stat-label">Games</div></div>
   </div>
 </section>
 
@@ -506,19 +501,47 @@ footer{
   </div>
 </section>
 
-<!-- SCREENSHOTS -->
+<!-- SCREENSHOTS / SHOWCASE -->
 <section class="screenshots" id="screenshots">
   <div class="section-header fade-up">
     <div class="tag">In de app</div>
     <h2>Dit is NEXOZ</h2>
-    <p>Van events ontdekken tot rewards verdienen</p>
   </div>
-  <div class="screenshots-track">
-    <div class="screenshot-item fade-up delay-1"><img src="onboarding-intro.png" alt="NEXOZ events feed"></div>
-    <div class="screenshot-item fade-up delay-2"><img src="onboarding-city.png" alt="NEXOZ games en quiz"></div>
-    <div class="screenshot-item fade-up delay-3"><img src="city-select.png" alt="NEXOZ rewards en coins"></div>
-    <div class="screenshot-item fade-up delay-4"><img src="interests.png" alt="NEXOZ event details"></div>
+  <div class="showcase-row fade-up">
+    <img src="ontdek-hero.jpg" alt="NEXOZ events ontdekken" class="showcase-img" loading="lazy">
+    <div class="showcase-text">
+      <h3>Ontdek wat er speelt</h3>
+      <p>Browse events per stad. Festivals, concerten, sport, cultuur — alles met echte foto's en data.</p>
+    </div>
   </div>
+  <div class="showcase-row reverse fade-up">
+    <img src="kaart-nl.jpg" alt="NEXOZ kaart van Nederland" class="showcase-img" loading="lazy">
+    <div class="showcase-text">
+      <h3>Heel Nederland op de kaart</h3>
+      <p>1500+ events verspreid over 20+ steden. Zoom in op je buurt of ontdek een nieuwe stad.</p>
+    </div>
+  </div>
+  <div class="showcase-row fade-up">
+    <img src="rewards-screen.jpg" alt="NEXOZ rewards en coins" class="showcase-img" loading="lazy">
+    <div class="showcase-text">
+      <h3>Verdien echte rewards</h3>
+      <p>Speel games, deel events en verdien coins. Wissel ze in voor korting bij Pathé, NS, Domino's en meer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GAMES -->
+<section class="games-section" id="games">
+  <div class="section-header fade-up">
+    <div class="tag">Games</div>
+    <h2>Games voor tussendoor</h2>
+    <p>Drie games, dagelijkse quiz, coins verdienen</p>
+  </div>
+  <div class="games-grid fade-up">
+    <img src="games-overzicht.jpg" alt="NEXOZ games overzicht" loading="lazy">
+    <img src="huisfeestje-gameplay.jpg" alt="Het Huisfeestje gameplay" loading="lazy">
+  </div>
+  <p class="games-caption fade-up">Trivia Duel, Het Huisfeestje en TapQuiz. Bouw een streak op, versla je vrienden en verdien NEXOZ Coins bij elke game.</p>
 </section>
 
 <!-- HOW IT WORKS -->
