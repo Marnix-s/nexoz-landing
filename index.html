@@ -252,10 +252,28 @@ nav.scrolled{background:rgba(6,6,15,.95);box-shadow:0 4px 30px rgba(0,0,0,.5)}
   box-shadow:0 20px 60px rgba(0,0,0,.4);
   border:1px solid rgba(147,51,234,.1);
 }
-.games-caption{
-  max-width:640px;margin:0 auto;text-align:center;
-  color:var(--text-muted);font-size:1.05rem;line-height:1.7;
+.games-highlights{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2rem;
 }
+.game-highlight{
+  padding:2rem;
+  background:var(--bg-card);
+  border:1px solid rgba(255,255,255,.04);
+  border-radius:var(--radius-lg);
+}
+.game-highlight-emoji{font-size:2.2rem;margin-bottom:.75rem}
+.game-highlight h3{font-size:1.15rem;font-weight:700;margin-bottom:.6rem}
+.game-highlight p{font-size:.95rem;color:var(--text-muted);line-height:1.6}
+.game-highlight-featured{
+  border:2px solid var(--purple);
+  background:linear-gradient(160deg, rgba(147,51,234,.15), var(--bg-card) 65%);
+  box-shadow:0 10px 40px rgba(147,51,234,.15);
+}
+.game-highlight-featured .game-highlight-emoji{font-size:2.6rem}
+.game-highlight-featured h3{font-size:1.35rem;color:var(--purple-light)}
+.game-highlight-featured p{font-size:1.02rem;color:var(--text)}
 
 /* ═══ HOW IT WORKS ═══ */
 .how{
@@ -395,6 +413,7 @@ footer{
   .showcase-row,.showcase-row.reverse{flex-direction:column;text-align:center;gap:1.5rem}
   .showcase-img{max-width:100%}
   .games-grid{grid-template-columns:1fr}
+  .games-highlights{grid-template-columns:1fr}
 }
 @media(max-width:600px){
   nav{padding:.75rem 1rem}
@@ -539,9 +558,25 @@ footer{
   </div>
   <div class="games-grid fade-up">
     <img src="games-overzicht.jpg" alt="NEXOZ games overzicht" loading="lazy">
-    <img src="huisfeestje-gameplay.jpg" alt="Het Huisfeestje gameplay" loading="lazy">
+    <img src="huisfeestje-gameplay.jpg?v=2" alt="Het Huisfeestje gameplay" loading="lazy">
   </div>
-  <p class="games-caption fade-up">Trivia Duel, Het Huisfeestje en TapQuiz. Bouw een streak op, versla je vrienden en verdien NEXOZ Coins bij elke game.</p>
+  <div class="games-highlights fade-up">
+    <div class="game-highlight game-highlight-featured">
+      <div class="game-highlight-emoji">🍺</div>
+      <h3>TapQuiz — Gratis pubquiz</h3>
+      <p>Organiseer een complete pubquiz met je vrienden. Eén telefoon als quizmaster, de rest speelt mee. Honderden vragen, automatische scores, helemaal gratis.</p>
+    </div>
+    <div class="game-highlight">
+      <div class="game-highlight-emoji">🏠</div>
+      <h3>Het Huisfeestje</h3>
+      <p>Spring via bierkratten, pizzadozen en studieboeken naar boven. Hoe hoog kom jij? Versla je vrienden en verdien coins.</p>
+    </div>
+    <div class="game-highlight">
+      <div class="game-highlight-emoji">🧠</div>
+      <h3>Trivia Duel</h3>
+      <p>Dagelijkse quizvragen over events en muziek. Bouw een streak op en bewijs dat jij de slimste bent.</p>
+    </div>
+  </div>
 </section>
 
 <!-- HOW IT WORKS -->
