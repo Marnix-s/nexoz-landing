@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NEXOZ — Never miss what's next</title>
-<meta name="description" content="NEXOZ is dé app voor studenten. Ontdek events, deals, festivals en uitgaan in jouw stad. Gratis voor iOS en Android.">
+<meta name="description" content="NEXOZ is dé app voor studenten. Ontdek events, speel games, verdien rewards en vind studentenkortingen. Gratis voor Android.">
 <meta property="og:title" content="NEXOZ — Never miss what's next">
-<meta property="og:description" content="Ontdek events, deals, festivals en uitgaan in jouw stad.">
+<meta property="og:description" content="Ontdek events, speel games, verdien rewards en vind studentenkortingen.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="map-icon.png">
 <link rel="icon" type="image/png" href="logo-white.png">
@@ -175,8 +175,8 @@ nav.scrolled{background:rgba(6,6,15,.95);box-shadow:0 4px 30px rgba(0,0,0,.5)}
   background:rgba(13,13,26,.5);
 }
 .stats-inner{
-  max-width:1000px;margin:0 auto;
-  display:grid;grid-template-columns:repeat(4,1fr);
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(5,1fr);
   gap:2rem;text-align:center;
 }
 .stat-num{
@@ -203,6 +203,10 @@ nav.scrolled{background:rgba(6,6,15,.95);box-shadow:0 4px 30px rgba(0,0,0,.5)}
 .section-header h2{
   font-size:clamp(2rem,4vw,3rem);font-weight:800;
   letter-spacing:-0.5px;
+}
+.section-header p{
+  color:var(--text-muted);font-size:1.1rem;
+  margin-top:.9rem;
 }
 .features-grid{
   max-width:1100px;margin:0 auto;
@@ -386,7 +390,7 @@ footer{
   .hero-visual{margin-top:2rem}
   .phone-float{display:none}
   .features-grid{grid-template-columns:1fr}
-  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stats-inner{grid-template-columns:repeat(3,1fr)}
   .nav-links{display:none}
 }
 @media(max-width:600px){
@@ -457,9 +461,10 @@ footer{
 <!-- STATS -->
 <section class="stats fade-up">
   <div class="stats-inner">
-    <div><div class="stat-num">1.750+</div><div class="stat-label">Events</div></div>
+    <div><div class="stat-num">5.000+</div><div class="stat-label">Events</div></div>
     <div><div class="stat-num">20+</div><div class="stat-label">Steden</div></div>
-    <div><div class="stat-num">5</div><div class="stat-label">Categorieën</div></div>
+    <div><div class="stat-num">6</div><div class="stat-label">Categorieën</div></div>
+    <div><div class="stat-num">10.000+</div><div class="stat-label">Rewards verdiend</div></div>
     <div><div class="stat-num">0€</div><div class="stat-label">Kosten</div></div>
   </div>
 </section>
@@ -501,6 +506,52 @@ footer{
       <h3>Bewaar & Deel</h3>
       <p>Sla je favorieten op en deel ze direct met vrienden. Maak plannen samen.</p>
     </div>
+    <div class="feature-card fade-up delay-1">
+      <div class="feature-emoji">🪙</div>
+      <h3>Verdien Rewards</h3>
+      <p>Verdien NEXOZ Coins door de app te gebruiken. Wissel ze in voor echte studentenkortingen en in-app beloningen.</p>
+    </div>
+    <div class="feature-card fade-up delay-2">
+      <div class="feature-emoji">🎮</div>
+      <h3>Mini-games</h3>
+      <p>Speel Tapquiz, Het Huisfeestje en Trivia Duel. Daag je vrienden uit en verdien coins.</p>
+    </div>
+    <div class="feature-card fade-up delay-3">
+      <div class="feature-emoji">🔥</div>
+      <h3>Vraag van de Dag</h3>
+      <p>Elke dag een nieuwe quizvraag. Bouw een streak op en verdien bonus coins.</p>
+    </div>
+    <div class="feature-card fade-up delay-1">
+      <div class="feature-emoji">📸</div>
+      <h3>Deel naar Stories</h3>
+      <p>Deel events als mooie kaarten naar Instagram Stories en WhatsApp. Laat zien waar jij heen gaat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REWARDS -->
+<section class="features" id="rewards">
+  <div class="section-header fade-up">
+    <div class="tag">Rewards</div>
+    <h2>🪙 Verdien & Verzilver</h2>
+    <p>Gebruik de app, verdien coins, unlock echte rewards</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card fade-up delay-1">
+      <div class="feature-emoji">🎮</div>
+      <h3>Verdien coins</h3>
+      <p>Quiz spelen, events delen, dagelijks openen — elke actie levert coins op.</p>
+    </div>
+    <div class="feature-card fade-up delay-2">
+      <div class="feature-emoji">🔓</div>
+      <h3>Ontgrendel rewards</h3>
+      <p>Wissel coins in voor studentenkortingen bij Pathé, NS, Domino's en meer.</p>
+    </div>
+    <div class="feature-card fade-up delay-3">
+      <div class="feature-emoji">🏆</div>
+      <h3>Speel & win</h3>
+      <p>Quiz Hints, profieltitels en meer in-app beloningen.</p>
+    </div>
   </div>
 </section>
 
@@ -508,7 +559,8 @@ footer{
 <section class="screenshots" id="screenshots">
   <div class="section-header fade-up">
     <div class="tag">In de app</div>
-    <h2>Zo ziet het eruit</h2>
+    <h2>Ontdek, speel & verdien</h2>
+    <p>Van stadkeuze tot dagelijkse quiz, mini-games en rewards — dit is NEXOZ.</p>
   </div>
   <div class="screenshots-track">
     <div class="screenshot-item fade-up delay-1"><img src="onboarding-intro.png" alt="Onboarding intro"></div>
@@ -522,7 +574,7 @@ footer{
 <section class="how" id="how">
   <div class="section-header fade-up">
     <div class="tag">Hoe het werkt</div>
-    <h2>In 3 stappen klaar</h2>
+    <h2>In 4 stappen klaar</h2>
   </div>
   <div class="how-steps">
     <div class="how-step fade-up">
@@ -546,14 +598,21 @@ footer{
         <p>Swipe door je tijdlijn, bekijk de kaart, check de prijs en ga eropuit. Nul FOMO.</p>
       </div>
     </div>
+    <div class="how-step fade-up delay-3">
+      <div class="step-num">04</div>
+      <div class="step-content">
+        <h3>Verdien rewards</h3>
+        <p>Speel de dagelijkse quiz, deel events en verdien NEXOZ Coins. Wissel ze in voor studentenkortingen en in-app beloningen.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CTA / DOWNLOAD -->
 <section class="cta-section" id="download">
   <div class="cta-box fade-up">
-    <h2>Klaar om te ontdekken?</h2>
-    <p>Download NEXOZ gratis en zeg vaarwel tegen FOMO. Alles wat er speelt, in jouw zak.</p>
+    <h2>Klaar om te ontdekken en te verdienen?</h2>
+    <p>Download NEXOZ gratis. Ontdek events, speel games en verdien rewards — alles in één app.</p>
     <div class="store-buttons">
       <a href="#" class="store-btn" style="opacity:.45;pointer-events:none;cursor:default" title="Binnenkort beschikbaar">
         <svg class="store-icon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
